@@ -1,176 +1,84 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-	<title>Home</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style>
-		* {
-			box-sizing: border-box;
-		}
-
-		body {
-			font-family: Arial, Helvetica, sans-serif;
-			margin: 0;
-		}
-
-		.header {
-			padding: 80px;
-			text-align: center;
-			background: #1abc9c;
-			color: white;
-		}
-
-		.header h1 {
-			font-size: 40px;
-		}
-
-		/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
-		.navbar {
-			overflow: hidden;
-			background-color: #333;
-			position: sticky;
-			position: -webkit-sticky;
-			top: 0;
-		}
-
-		/* Style the navigation bar links */
-		.navbar a {
-			float: left;
-			display: block;
-			color: white;
-			text-align: center;
-			padding: 14px 20px;
-			text-decoration: none;
-		}
-
-
-		/* Right-aligned link */
-		.navbar a.right {
-			float: right;
-		}
-
-		/* Change color on hover */
-		.navbar a:hover {
-			background-color: #ddd;
-			color: black;
-		}
-
-		/* Active/current link */
-		.navbar a.active {
-			background-color: #666;
-			color: white;
-		}
-
-		/* Column container */
-		.row {  
-			display: -ms-flexbox; /* IE10 */
-			display: flex;
-			-ms-flex-wrap: wrap; /* IE10 */
-			flex-wrap: wrap;
-		}
-
-		/* Create two unequal columns that sits next to each other */
-		/* Sidebar/left column */
-		.side {
-			-ms-flex: 30%; /* IE10 */
-			flex: 30%;
-			background-color: #f1f1f1;
-			padding: 20px;
-		}
-
-		/* Main column */
-		.main {   
-			-ms-flex: 70%; /* IE10 */
-			flex: 70%;
-			background-color: white;
-			padding: 20px;
-		}
-
-		/* Fake image, just for this example */
-		.fakeimg {
-			background-color: #aaa;
-			width: 100%;
-			padding: 20px;
-		}
-
-		/* Footer */
-        .footer {
-            position: fixed; /* Fixed position */
-            left: 0;
-            bottom: 0; /* Align to the bottom of the viewport */
-            width: 100%; /* Full width */
-            padding: 20px;
-            text-align: center;
-            background: #ddd;
-        }
-
-
-		/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-		@media screen and (max-width: 700px) {
-			.row {   
-				flex-direction: column;
-			}
-		}
-
-		/* Responsive layout - when the screen is less than 700px wide, make the navigation links stack on top of each other instead of next to each other */
-		@media screen and (max-width: 700px) {
-			.navbar a {
-				float: none;
-				width: 100%;
-			}
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluewave Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100 font-sans">
+    <!-- Navbar -->
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-600">Bluewave Solutions</a>
+            <nav class="space-x-6">
+                <a href="#about" class="text-gray-700 hover:text-blue-600">About</a>
+                <a href="#services" class="text-gray-700 hover:text-blue-600">Services</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-	<div class="header">
-		<h1>My Website</h1>
-		<p>A <b>GitHub</b> hosted website.</p>
-	</div>
+    <!-- Hero Section -->
+    <section class="bg-blue-600 text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold mb-4">Welcome to Bluewave Solutions</h1>
+            <p class="text-lg mb-8">We deliver innovative solutions to help your business grow.</p>
+            <a href="#services" class="bg-white text-blue-600 px-6 py-3 rounded shadow hover:bg-gray-200">Learn More</a>
+        </div>
+    </section>
 
-	<div class="navbar">
-		<a href="#" class="active">Home</a>
-		<a href="#">Link</a>
-		<a href="#">Link</a>
-		<a href="#" class="right">Link</a>
-	</div>
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">About Us</h2>
+            <p class="text-gray-700 leading-relaxed">Bluewave Solutions is dedicated to providing top-notch services to clients around the globe. Our experienced team is committed to excellence and innovation in everything we do.</p>
+        </div>
+    </section>
 
-	<div class="row">
-		<div class="side">
-			<h2>About Me</h2>
-			<p>I'm not real. There is nothing to see.</p>
-		</div>
-		<div class="main">
-			<h2>Embracing the Journey: A Path of Personal Growth and Self-Reflection</h2>
-			<h5>Written by me on Jan 1, 1970</h5>
-            <p>
-                Introduction:<br>
-                In the hustle and bustle of modern life, it's easy to get caught up in the daily grind and lose sight of our personal growth journey. However, taking the time to reflect on our experiences, challenges, and triumphs can lead to profound insights and transformative growth. In this blog post, we'll explore the importance of self-reflection and how it can empower us to embrace our journey of personal growth.<br>
-                <br>
-                The Power of Self-Reflection:<br>
-                Self-reflection is a powerful tool for personal development. It allows us to pause, step back, and examine our thoughts, emotions, and behaviors with a sense of curiosity and openness. By tuning into our inner world, we gain valuable insights into our strengths, weaknesses, and areas for improvement. Whether it's through journaling, meditation, or simply quiet contemplation, carving out time for self-reflection creates space for self-awareness and self-discovery.<br>
-                <br>
-                Embracing Growth Through Challenges:<br>
-                Life is filled with ups and downs, challenges, and setbacks. While it's tempting to avoid discomfort and seek security in the familiar, true growth often occurs outside of our comfort zone. Embracing challenges with a growth mindset allows us to learn from adversity, cultivate resilience, and expand our potential. Every obstacle we encounter is an opportunity for growth and self-discovery, guiding us along our journey toward becoming the best version of ourselves.<br>
-                <br>
-                The Importance of Mindfulness:<br>
-                Mindfulness is the practice of being fully present in the moment, without judgment or attachment. By cultivating mindfulness in our daily lives, we enhance our ability to engage with the world around us with clarity, compassion, and acceptance. Mindful awareness enables us to observe our thoughts and feelings without being consumed by them, fostering a deeper connection to ourselves and others. Through mindfulness, we can navigate life's challenges with greater ease and cultivate a sense of inner peace and well-being.<br>
-                <br>
-                Celebrating Progress, Not Perfection:<br>
-                In our quest for personal growth, it's essential to remember that perfection is not the goal. Rather than striving for unattainable ideals, we can celebrate our progress, no matter how small. Each step we take toward becoming the best version of ourselves is worthy of acknowledgment and celebration. By embracing our imperfections and honoring our progress, we cultivate self-compassion and self-acceptance, laying the foundation for continued growth and fulfillment.<br>
-                <br>
-                Conclusion:<br>
-                Embarking on a journey of personal growth and self-reflection is a deeply rewarding endeavor. By embracing self-reflection, navigating challenges with mindfulness, and celebrating our progress, we can cultivate a life of purpose, authenticity, and fulfillment. As we continue along this journey, may we always remember that the path to personal growth is not about reaching a destination but rather embracing the journey with an open heart and an open mind.<br>
-            </p>
-			<br>
-		</div>
-	</div>
+    <!-- Services Section -->
+    <section id="services" class="bg-gray-100 py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-6">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white shadow rounded-lg p-6 text-center">
+                    <div class="text-blue-600 text-5xl mb-4">☁️</div>
+                    <h3 class="text-xl font-bold mb-2">Cloud Integration</h3>
+                    <p class="text-gray-700">Seamlessly integrate your business with cutting-edge cloud solutions.</p>
+                </div>
+                <div class="bg-white shadow rounded-lg p-6 text-center">
+                    <div class="text-blue-600 text-5xl mb-4">🚀</div>
+                    <h3 class="text-xl font-bold mb-2">Digital Transformation</h3>
+                    <p class="text-gray-700">Empowering businesses to thrive with modern digital strategies.</p>
+                </div>
+                <div class="bg-white shadow rounded-lg p-6 text-center">
+                    <div class="text-blue-600 text-5xl mb-4">🌐</div>
+                    <h3 class="text-xl font-bold mb-2">Global IT Support</h3>
+                    <p class="text-gray-700">Reliable IT services to keep your business connected worldwide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<div class="footer">
-		<h3>Life is like a camera. Focus on what's important, capture the good times, develop from the negatives, and if things don't work out, take another shot. Keep clicking, keep learning, and always remember to frame life with a smile.</h3>
-	</div>
+    <!-- Contact Section -->
+    <section id="contact" class="bg-blue-600 text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+            <p class="mb-6">We'd love to hear from you! Reach out today to learn more about how we can help your business.</p>
+            <form class="max-w-lg mx-auto">
+                <input type="text" placeholder="Your Name" class="w-full mb-4 px-4 py-2 rounded text-gray-900">
+                <input type="email" placeholder="Your Email" class="w-full mb-4 px-4 py-2 rounded text-gray-900">
+                <textarea placeholder="Your Message" class="w-full mb-4 px-4 py-2 rounded text-gray-900"></textarea>
+                <button type="submit" class="bg-white text-blue-600 px-6 py-3 rounded shadow hover:bg-gray-200">Send Message</button>
+            </form>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Bluewave Solutions. All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
